@@ -1,4 +1,4 @@
-Linked List Zip
+# Linked List Zip
 
 Whiteboard Process
 ![img_3.png](img_3.png)
