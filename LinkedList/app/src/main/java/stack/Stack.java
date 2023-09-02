@@ -21,14 +21,11 @@ public class Stack {
         return top ==null;
     }
     public int pop() {
-        try{
-            if (isEmpty())
-                throw new RuntimeException("Stack is empty");
 
-        }catch (IllegalArgumentException | IndexOutOfBoundsException e) {
-            System.out.println("Exception: " + e.getMessage());
-            return -1;
-        }
+            if (isEmpty())
+                System.out.println("Stack is empty, nothing to pop");
+
+
             int value = top.value;
             top = top.next;
             return value;
@@ -37,14 +34,11 @@ public class Stack {
 
 
 public int peek(){
-    try{
-        if (isEmpty())
-            throw new RuntimeException("Stack is empty");
 
-    }catch (IllegalArgumentException | IndexOutOfBoundsException e) {
-        System.out.println("Exception: " + e.getMessage());
-        return -1;
-    }
+    if (isEmpty())
+        System.out.println("Stack is empty, nothing to peek");
+
+
        return top.value;
 
 }

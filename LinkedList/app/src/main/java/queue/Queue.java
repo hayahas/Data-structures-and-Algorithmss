@@ -19,30 +19,20 @@ public boolean isEmpty(){
 
     }
     public int dequeue(){
-     int value;
-        try{
-            if (isEmpty())
-                throw new RuntimeException("Queue is empty");
-
-        }catch (IllegalArgumentException | IndexOutOfBoundsException e) {
-            System.out.println("Exception: " + e.getMessage());
-            return -1;
-        }
-        value= front.value;;
+       int value;
+         if (isEmpty())
+         System.out.println("Queue is empty, nothing to Dequeue");
+         value= front.value;;
        front=front.next;
 
         if(front == rear) front.next=null;
          return value;
     }
     public int peek(){
-    try{
-        if (isEmpty())
-            throw new RuntimeException("Queue is empty");
 
-    }catch (IllegalArgumentException | IndexOutOfBoundsException e) {
-        System.out.println("Exception: " + e.getMessage());
-        return -1;
-    }
+        if (isEmpty())
+            System.out.println("Queue is empty, nothing to Peek");
+
         return front.value;
 
     }
