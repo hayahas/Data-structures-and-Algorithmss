@@ -7,4 +7,5 @@
 - [Code Challenge 5](/LinkedList/READMEINSERTIONS.md)
 - [Code Challenge 6](/LinkedList/READMEKTH.md)
 - [Code Challenge 8](/LinkedList/READMEZIP.md)
+- [Code Challenge 10](/LinkedList/READMESTACK&QUEUE.md)
 
