@@ -1,7 +1,11 @@
 # Stack and Queue implementation
 
 Whiteboard Process
+
+# Stack
 ![img_4.png](img_4.png)
+
+# Queue
 
 ![img_5.png](img_5.png)
 
