@@ -18,6 +18,9 @@ Solution
 - [Stack](/LinkedList/app/src/main/java/stack/App.java)
 
 - [Queue ](/LinkedList/app/src/main/java/queue/App.java)
+
+
+# Stack
   
 ````
 package stack;
@@ -79,6 +82,9 @@ return values;
     }
 
 `````
+
+# Queue 
+
 `````
 package queue;
 
