@@ -12,10 +12,10 @@ public class App {
         s.push(300);
         s.push(400);
         System.out.println("Stack : "+s.toString());
-//        System.out.println("First Value in stack : "+s.peek());
-//        System.out.println("Value popped : "+s.pop());
-//        System.out.println("Stack : "+s.toString());
-//        System.out.println("First Value in stack : "+s.peek());
+        System.out.println("First Value in stack : "+s.peek());
+        System.out.println("Value popped : "+s.pop());
+        System.out.println("Stack : "+s.toString());
+        System.out.println("First Value in stack : "+s.peek());
 
 
     }
