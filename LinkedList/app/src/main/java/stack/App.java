@@ -10,16 +10,13 @@ public class App {
         s.push(100);
         s.push(200);
         s.push(300);
-        s.push(400);
-        System.out.println("Stack : "+s.toString());//400-300-200-100
+        s.push(400);        System.out.println("Stack : "+s.toString());//400-300-200-100
         System.out.println("First Value in stack : "+s.peek());//400
         System.out.println("Value popped : "+s.pop());//400
         System.out.println("Stack : "+s.toString());//300-200-100
         System.out.println("First Value in stack : "+s.peek());//300
         System.out.println(s.isEmpty());//false
         System.out.println("");
-
-        ///////////////////////////////////////////////////////
 
         System.out.println("cc11");
         System.out.println("");
