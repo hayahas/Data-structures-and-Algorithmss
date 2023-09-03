@@ -39,7 +39,7 @@ public boolean isEmpty(){
     @Override
     public String toString() {
         String values = "";
-        Node current = front; // Create a temporary variable to iterate through the nodes
+        Node current = front;
         while (current != null) {
             values += current.value + "->";
             current = current.next;
