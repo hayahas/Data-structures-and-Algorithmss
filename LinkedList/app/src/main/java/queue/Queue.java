@@ -1,51 +1,56 @@
 package queue;
+public class Queue<T> {
+    private Node<T> front;
+    private Node<T> rear;
 
-public class Queue {
+    public Queue(){
+        front = null;
+        rear = null;
+    }
 
-    Node front;
-    Node rear;
-public boolean isEmpty(){
-    if(rear==null) return true;
+    public boolean isEmpty() {
+        return rear == null;
+    }
 
-    return false;
-}
-    public void enqueue(int x){
-        Node newNode=new Node(x);
-        if(isEmpty()){
-            rear=front=newNode;
+    public void enqueue(T value){
+        Node<T> newNode = new Node<>(value, null);
+        if (isEmpty()){
+            rear = front = newNode;
+        }else {
+            rear.next = newNode;
+            rear = newNode;
         }
-        rear.next=newNode;
-        rear=newNode;
-
     }
-    public int dequeue(){
-       int value;
-         if (isEmpty())
-         System.out.println("Queue is empty, nothing to Dequeue");
-         value= front.value;;
-       front=front.next;
 
-        if(front == rear) front.next=null;
-         return value;
+    public T dequeue() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty, nothing to Dequeue");
+        }
+        T value = front.value;
+        front = front.next;
+
+        if (front == null) {
+            rear = null;
+        }
+        return value;
     }
-    public int peek(){
 
-        if (isEmpty())
-            System.out.println("Queue is empty, nothing to Peek");
-
+    public T peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty, nothing to Peek");
+        }
         return front.value;
-
     }
+
     @Override
     public String toString() {
-        String values = "";
-        Node current = front;
+        StringBuilder values = new StringBuilder();
+        Node<T> current = front;
         while (current != null) {
-            values += current.value + "->";
+            values.append(current.value).append("->");
             current = current.next;
         }
-        values += "null";
-        return values;
-
+        values.append("null");
+        return values.toString();
     }
 }
