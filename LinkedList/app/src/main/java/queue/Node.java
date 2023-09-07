@@ -1,17 +1,10 @@
-package queue;
+package queue;public class Node<T> {
 
-public class Node {
-    int value;
-    Node next;
+    public T value;
+    public Node<T> next;
 
-    Node prev;
-    public Node() {
-
-    }
-    public Node(int value){
-        this.value=value;
-        this.next=null;
-        this.prev=null;
-
+    public Node(T value, Node<T> next) {
+        this.value = value;
+        this.next = null;
     }
 }

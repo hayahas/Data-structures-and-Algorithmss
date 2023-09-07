@@ -19,7 +19,7 @@ public class QueueTest {
         Queue q = new Queue();
         q.enqueue(10);
         q.enqueue(20);
-        int result = q.dequeue();
+        Object result = q.dequeue();
         Assertions.assertEquals(10,result);
     }
     @Test void testEnequeue_returnsValuesOfQueues(){
@@ -35,7 +35,7 @@ public class QueueTest {
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
-        int result =q.peek();
+        Object result =q.peek();
         Assertions.assertEquals(10,result);
     }
 }

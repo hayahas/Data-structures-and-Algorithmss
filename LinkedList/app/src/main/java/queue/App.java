@@ -11,7 +11,7 @@ public class App {
         q.enqueue(400);
         System.out.println("Queue : "+q.toString()); //100-200-300-400
         System.out.println("First Value in queue : "+q.peek());//100
-        System.out.println("value dequeued : "+q.dequeue());//100
+       // System.out.println("value dequeued : "+q.dequeue());//100
         System.out.println("Queue : "+q.toString());//200-300-400
         System.out.println("First Value in queue : "+q.peek());//200
         System.out.println(q.isEmpty());//false
