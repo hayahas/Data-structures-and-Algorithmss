@@ -8,5 +8,7 @@
 - [Code Challenge 6](/LinkedList/READMEKTH.md)
 - [Code Challenge 8](/LinkedList/READMEZIP.md)
 - [Code Challenge 10](/LinkedList/READMESTACK&QUEUE.md)
-- [Code Challenge 11](/LinkedList/READMEPSEUDOQUEUE.md) 
+- [Code Challenge 11](/LinkedList/READMEPSEUDOQUEUE.md)
+- [Code Challenge 12](/LinkedList/READMEANIMALSHELTER.md)
+  
 
