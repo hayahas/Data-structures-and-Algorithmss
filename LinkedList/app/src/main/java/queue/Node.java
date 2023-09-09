@@ -1,4 +1,8 @@
-package queue;public class Node<T> {
+package queue;
+
+import queue.animalShell.Animal;
+
+public class Node<T> {
 
     public T value;
     public Node<T> next;
@@ -6,5 +10,8 @@ package queue;public class Node<T> {
     public Node(T value, Node<T> next) {
         this.value = value;
         this.next = null;
+    }
+
+    public Node(Animal animal) {
     }
 }

@@ -6,43 +6,63 @@ import queue.Queue;
 
 
 public class AnimalShelter<T> {
-    private Node<T> rear;
-    private Node<T> front;
-    Queue<Animal> animalsQueue = new Queue<>();
+    private Node<Animal> rear;
+    private Node<Animal> front;
+    Queue<Animal> animalsQueue ;
 
-public void enequeue(Animal animal){
-    animalsQueue.enqueue(animal);
+    public AnimalShelter() {
+        animalsQueue =  new Queue<>();
+    }
+    public boolean isEmpty() {
+        return rear == null;
+    }
+public void enequeue(Animal  animal)
+{
+    Node<Animal> newNode = new Node<>(animal, null);
+
+    if (rear == null){
+        front = newNode;
+        rear = newNode;
+    } else {
+        rear.next = newNode;
+        rear = newNode;
+    }
 }
 
-public Object dequeue(String pref){
-    T kind;
-    if(front.value == pref){
-        kind= front.value;
-        front=front.next;
-        return kind;
-    }
-    Node<T> temp =front;
-    while (temp.next != null && temp.next.value != pref){
-        temp=temp.next;
-    }
-    if (temp.next != null){
-       kind = temp.next.value;
-        temp.next = temp.next.next;
-        return kind;
+public String dequeue(String pref) {
+
+    if (pref.equals("dog") || pref.equals("cat")) {
+        if (front.value.getSpecies().equals(pref)) {
+            Animal a = front.value;
+            front = front.next;
+            return  a.getSpecies()+ " " + a.getName();
+        } else {
+            Node<Animal> current = front;
+            while (current.next != null && !current.next.value.getSpecies().equals(pref)) {
+                current = current.next;
+            }
+
+            if (current.next != null) {
+                Animal a = current.next.value;
+                current.next = current.next.next;
+                return a.getSpecies()+ " " + a.getName();
+            }
+        }
     }
     return null;
 }
-
     @Override
     public String toString() {
-        StringBuilder values = new StringBuilder();
-        Node<T> current = front;
+        StringBuilder shelter = new StringBuilder("");
+        Node<Animal> current = front;
         while (current != null) {
-            values.append(current.value).append("->");
+            shelter.append(current.value.getSpecies()).append(" -> ");
+
             current = current.next;
         }
-        values.append("null");
-        return values.toString();
+
+        shelter.append("null");
+        return shelter.toString();
     }
 
 
