@@ -1,17 +1,23 @@
 package stack;
 
-public class Node {
-    int value;
-    Node next;
+public class Node<T> {
+    public T  value;
+    public Node<T> next;
 
-    Node prev;
+
     public Node() {
 
     }
-    public Node(int value){
+
+    public Node(T value) {
+        this.value = value;
+    }
+        public Node(T value, Node<T> next){
         this.value=value;
         this.next=null;
-        this.prev=null;
+
 
     }
+
+
 }

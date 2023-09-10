@@ -35,7 +35,7 @@ PseudoQueue pq=new PseudoQueue();
         pq.enqueue(2);
         pq.enqueue(3);
         pq.enqueue(4);
-        int result= pq.dequeue();
+        Object result= pq.dequeue();
         Assertions.assertEquals(1,result);
     }
 }

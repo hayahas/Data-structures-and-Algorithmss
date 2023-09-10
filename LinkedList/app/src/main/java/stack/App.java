@@ -31,6 +31,19 @@ public class App {
         System.out.println(pq.isEmpty());//false
         System.out.println("Value Dequeued : " + pq.dequeue()); //20
          System.out.println("Value Dequeued : " + pq.dequeue()); //15
+        System.out.println("");
+
+        /////////////////////////////////////////////////////
+        System.out.println("cc13");
+        System.out.println("");
+
+        Stack stack = new Stack<>();
+        System.out.println(stack.validateBrackets("()[[Extra Characters]]")); //true
+        System.out.println(stack.validateBrackets("(){}[[]]")); //true
+        System.out.println(stack.validateBrackets("[({}]")); //false
+        System.out.println(stack.validateBrackets("(]("));//false
+
+
 
 
     }
