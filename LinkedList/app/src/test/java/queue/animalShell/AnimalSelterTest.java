@@ -37,7 +37,7 @@ public class AnimalSelterTest {
         as.enequeue(cat);
         as.enequeue(dog);
         String result = as.dequeue("dog");
-        Assertions.assertEquals("Buddy",result);
+        Assertions.assertEquals("dog Buddy",result);
     }
 
 }
