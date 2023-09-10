@@ -1,19 +1,19 @@
 package stack;
 
-public class PseudoQueue {
-    Node top;
-    Stack s1 =new Stack();
-    Stack s2 =new Stack();
+public class PseudoQueue<T> {
+    Node<T> top;
+    Stack<T> s1 =new Stack();
+    Stack<T> s2 =new Stack();
 
  public boolean isEmpty(){
      return s1.isEmpty() && s2.isEmpty();
  }
 
- public void enqueue(int value){
+ public void enqueue(T value){
      s1.push(value);
  }
 
- public int dequeue(){
+ public T dequeue(){
      if (isEmpty()==true) {
          throw new IllegalStateException("Queue is empty");
      }
