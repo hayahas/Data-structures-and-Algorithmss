@@ -58,7 +58,12 @@ public T peek(){
         }
         return s.isEmpty();
 
+
+
 }
+
+
+
     @Override
         public String toString() {
         String values = "";
