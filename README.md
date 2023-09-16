@@ -1,8 +1,8 @@
 # Data-structures-and-algorithms
 
 - [Array Reverse ](/CodeChallenge1/README.md)
-- [Code Challenge 2](/CodeChallenge2/README.md)
-- [Code Challenge 3](/CodeChallenge3/README.md)
+- [Array Insert shift](/CodeChallenge2/README.md)
+- [Array Binary Search](/CodeChallenge3/README.md)
 - [Linked List Implementation](/LinkedList/README.md)
 - [Linked List Insertions](/LinkedList/READMEINSERTIONS.md)
 - [Linked List Kth Value](/LinkedList/READMEKTH.md)
