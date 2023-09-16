@@ -11,5 +11,4 @@
 - [Pesuedo Queue](/LinkedList/READMEPSEUDOQUEUE.md)
 - [Animal Shelter](/LinkedList/READMEANIMALSHELTER.md)
 - [Balanced Brackets](/LinkedList/READMEBALANCEDBRACKETS.md)
-  
-
+- [Binary Tree and BST] (/)
