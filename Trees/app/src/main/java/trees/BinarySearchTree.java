@@ -81,6 +81,22 @@ public void insertHelper(Node<T> temp, T value) {
     }
 
 
+    public T getMax(){
+        Node<T> temp = root;
+        while(temp.right != null){
+            temp=temp.right;
+        }
+        return temp.value;
+    }
+
+    public T getMin(){
+        Node<T> temp = root;
+        while(temp.left != null){
+            temp=temp.left;
+        }
+        return temp.value;
+    }
+
 
 
 }
