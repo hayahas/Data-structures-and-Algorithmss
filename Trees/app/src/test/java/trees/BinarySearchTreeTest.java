@@ -53,5 +53,30 @@ public class BinarySearchTreeTest {
 
     }
 
+    @Test
+    public void testGetMaxReturnsTheMaximumValueInTree(){
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(10);
+        bst.insert(15);
+        bst.insert(20);
+        bst.insert(25);
+
+        Assertions.assertEquals(25,bst.getMax());
+
+    }
+
+    @Test
+    public void testGetMinReturnsTheMinimumValueInTree(){
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(20);
+        bst.insert(15);
+        bst.insert(10);
+        bst.insert(25);
+        Assertions.assertEquals(3,bst.getMin());
+
+    }
+
 
 }
