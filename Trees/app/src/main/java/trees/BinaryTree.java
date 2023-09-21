@@ -1,8 +1,6 @@
 package trees;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class BinaryTree<T> {
 
@@ -71,6 +69,25 @@ public class BinaryTree<T> {
         return temp.value;
     }
 
+    public ArrayList<T> breadthFirst (){
 
+        ArrayList<T> result = new ArrayList<>();
 
+        if(root == null ){
+            throw new NullPointerException("Tree is Empty");
+        }
+
+        Queue<Node> q = new LinkedList<>();
+
+        q.add(root);
+        while(!q.isEmpty()){
+            Node<T> temp =q.poll();
+            result.add(temp.value);
+            if(temp.left != null) q.add(temp.left);
+            if(temp.right != null) q.add(temp.right);
+
+        }
+        return result;
+
+    }
 }

@@ -14,9 +14,10 @@ OOP , While Loop
 ```java
 package trees;
 
+
 public class BinaryTree<T> {
     
-    
+
     public T getMax() {
 
        if (root == null) {
