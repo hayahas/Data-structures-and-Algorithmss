@@ -14,8 +14,7 @@ OOP , While Loop
 ```java
 package trees;
 
-public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
-    
+public class BinaryTree<T>   {
     
     public T getMax() {
         Node<T> temp = root;

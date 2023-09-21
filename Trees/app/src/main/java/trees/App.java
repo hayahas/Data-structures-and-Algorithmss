@@ -21,8 +21,6 @@ public class App {
         System.out.println(bst.contains(8)); // true
         System.out.println(bst.contains(10)); // false
 
-        BinaryTree<Integer> bt = new BinaryTree<>();
-
 
 
         System.out.println("Max value : " + bst.getMax()); // 8
