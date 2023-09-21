@@ -1,14 +1,17 @@
 package trees;
 
 
-public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree {
+public class BinarySearchTree <T extends Comparable< T>> extends BinaryTree {
 
-    Node<T> root;
+
 
     public Node<T> getRoot() {
         return root;
     }
 
+    public BinarySearchTree(){
+        super();
+    }
     public boolean isEmpty() {
         return root == null;
     }
@@ -81,21 +84,6 @@ public void insertHelper(Node<T> temp, T value) {
     }
 
 
-    public T getMax(){
-        Node<T> temp = root;
-        while(temp.right != null){
-            temp=temp.right;
-        }
-        return temp.value;
-    }
-
-    public T getMin(){
-        Node<T> temp = root;
-        while(temp.left != null){
-            temp=temp.left;
-        }
-        return temp.value;
-    }
 
 
 

@@ -9,8 +9,7 @@ public class App {
 
     public static <T> void main(String[] args) {
 
-        BinarySearchTree bst = new BinarySearchTree();
-
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
         bst.insert(5);
         bst.insert(3);
         bst.insert(7);
@@ -19,12 +18,15 @@ public class App {
         bst.insert(6);
         bst.insert(8);
 
-        System.out.println( bst.contains(8)); //true
-        System.out.println( bst.contains(10)); //false
+        System.out.println(bst.contains(8)); // true
+        System.out.println(bst.contains(10)); // false
 
-        System.out.println("Max value : "+bst.getMax());//8
-        System.out.println("Min value : "+bst.getMin());//2
+        BinaryTree<Integer> bt = new BinaryTree<>();
 
+
+
+        System.out.println("Max value : " + bst.getMax()); // 8
+        System.out.println("Min value : " + bst.getMin()); // 2
 
 
 
