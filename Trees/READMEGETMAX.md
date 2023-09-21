@@ -15,7 +15,6 @@ OOP , While Loop
 package trees;
 
 public class BinaryTree<T>   {
-    
     public T getMax() {
         Node<T> temp = root;
         while (temp.right != null) {
