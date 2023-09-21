@@ -1,7 +1,11 @@
 # Stack and Queue implementation
 
 Whiteboard Process
+
+# Stack
 ![img_4.png](img_4.png)
+
+# Queue
 
 ![img_5.png](img_5.png)
 
@@ -14,6 +18,9 @@ Solution
 - [Stack](/LinkedList/app/src/main/java/stack/App.java)
 
 - [Queue ](/LinkedList/app/src/main/java/queue/App.java)
+
+
+# Stack
   
 ````
 package stack;
@@ -75,6 +82,9 @@ return values;
     }
 
 `````
+
+# Queue 
+
 `````
 package queue;
 
