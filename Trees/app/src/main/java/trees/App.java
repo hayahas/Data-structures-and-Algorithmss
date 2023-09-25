@@ -4,6 +4,7 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
 
@@ -25,6 +26,7 @@ public class App {
         System.out.println("Min value : " + bst.getMin()); // 2
 
         System.out.println(bst.breadthFirst());
+
 
 
     }
