@@ -1,5 +1,7 @@
 package trees;
 
+import org.checkerframework.common.value.qual.StringVal;
+
 import java.util.*;
 
 public class BinaryTree<T> {
@@ -90,4 +92,46 @@ public class BinaryTree<T> {
         return result;
 
     }
+
+
+
+    public BinaryTree<String> fizzBuzzTree(BinaryTree<Integer> integerTree) {
+        BinaryTree<String> fbTree = new BinaryTree<>();
+        fbTree.root = fizzBuzzHelper(integerTree.root);
+        return fbTree;
+    }
+
+    private Node<String> fizzBuzzHelper(Node<Integer> node) {
+        if (node == null) {
+            return null;
+        }
+
+        Node<String> fbNode;
+        fbNode = new Node<>(Integer.toString(node.value));
+
+        fbNode.left = fizzBuzzHelper(node.left);
+
+        if (node.value % 3 == 0 && node.value % 5 == 0) {
+            fbNode.value = "FizzBuzz";
+        } else if (node.value % 3 == 0) {
+            fbNode.value = "Fizz";
+        } else if (node.value % 5 == 0) {
+            fbNode.value = "Buzz";
+        }
+
+        fbNode.right = fizzBuzzHelper(node.right);
+
+        return fbNode;
+    }
+
+    public void traverseTree(Node<String> node, List<String> result) {
+        if (node != null) {
+            traverseTree(node.left, result);
+            result.add(node.value);
+            traverseTree(node.right, result);
+        }
+    }
+
+
+
 }
