@@ -1,7 +1,7 @@
 # Trees : FizzBuzz
 
 ### Whiteboard Process
-![img_3.png](img_3.png)
+![img_4.png](img_4.png)
 ### Approach & Efficiency
 OOP, if Statement
 
