@@ -15,6 +15,6 @@
 - [Trees : Max & Min values](/Trees/READMEGETMAX.md)
 - [Trees : Breadth-first Traversal](/Trees/READMEBREADTH.md)
 - [Trees : FizzBuzz](/Trees/READMEFIZZBUZZ.md)
-- [Insertion Sort](/Trees/READMEFIZZBUZZ.md)
+- [Insertion Sort](/Sorting/insertion/READMESORTING.md)
 
 
