@@ -16,5 +16,6 @@
 - [Trees : Breadth-first Traversal](/Trees/READMEBREADTH.md)
 - [Trees : FizzBuzz](/Trees/READMEFIZZBUZZ.md)
 - [Insertion Sort](/Sorting/insertion/READMESORTING.md)
-
+- [Merge Sort](/Sorting/merge/README.md)
+  
 
