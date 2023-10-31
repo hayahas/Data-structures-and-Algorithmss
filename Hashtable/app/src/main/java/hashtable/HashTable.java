@@ -1,9 +1,13 @@
 package hashtable;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class HashTable<T> {
 
     int size;
-    Node hashArray[];
+    Node<T> hashArray[];
 
     public HashTable(int size){
         this.size=size;
@@ -12,6 +16,24 @@ public class HashTable<T> {
             hashArray[i]= new Node<T>();
         }
     }
+
+    public List<Integer> keys(){
+        List<Integer> keyList = new ArrayList<>();
+
+        for (Node<T> bucket : hashArray) {
+            Node<T> current = bucket;
+            while (current != null) {
+                if (current.getValue() != null)
+                {
+                    keyList.add(current.getKey());
+                }
+                current = current.next;
+            }
+        }
+
+        return keyList;
+    }
+
 
     public int hash(int key){
         return key%size;
@@ -29,13 +51,13 @@ public class HashTable<T> {
     public T get(int key){
         int index = hash(key);
         Node<T> current = hashArray[index];
-    while(current != null){
-        if(current.getKey() == key)
-            return current.getValue();
+        while(current != null){
+            if(current.getKey() == key)
+                return current.getValue();
 
-        current=current.next;
-    }
-    return null;
+            current=current.next;
+        }
+        return null;
     }
 
     public boolean has(int key) {
