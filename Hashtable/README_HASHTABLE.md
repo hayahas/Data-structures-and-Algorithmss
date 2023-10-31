@@ -97,10 +97,10 @@ public class HashTable<T> {
         }
         return false;
     }
-
-
-
 }
 
 
 ```
+- Output :
+![image](https://github.com/hayahas/Data-structures-and-Algorithmss/assets/103423497/f4296176-4591-48f8-b59a-f2910f970bbb)
+
