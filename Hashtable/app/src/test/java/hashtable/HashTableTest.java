@@ -2,6 +2,9 @@ package hashtable;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HashTableTest {
@@ -42,6 +45,24 @@ public class HashTableTest {
         assertEquals(3,hashTable.hash(23));
 
     }
+    @Test
+    public void testKeysInHashTable(){
+
+
+
+        hashTable.set(1, "One");
+        hashTable.set(2, "Two");
+        hashTable.set(3, "Three");
+        hashTable.set(6, "Eleven");
+
+        List<Integer> keys = new ArrayList<>();
+        keys.add(1);keys.add(2);keys.add(3);keys.add(6);
+        assertEquals(keys,hashTable.keys());
+
+
+
+    }
+
 
     @Test
     public void testHasInHashTable(){

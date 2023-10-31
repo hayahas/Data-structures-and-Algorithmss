@@ -3,26 +3,34 @@
  */
 package hashtable;
 
+import java.util.List;
+
 public class App {
     public static void main(String[] args) {
 
         HashTable<String> hashTable = new HashTable<>(10);
 
+
         hashTable.set(1, "One");
         hashTable.set(2, "Two");
         hashTable.set(3, "Three");
-        hashTable.set(11, "Eleven");
+        hashTable.set(9, "Nine");
+
 
         System.out.println("Value 1: " + hashTable.get(1));
         System.out.println("Value 2: " + hashTable.get(2));
         System.out.println("Value 3: " + hashTable.get(3));
         System.out.println("Value 4: " + hashTable.get(4));
-        System.out.println("Value 11: " + hashTable.get(11));
+        System.out.println("Value 9: " + hashTable.get(9));
 
         System.out.println();
 
         System.out.println("Has 2 ? " + hashTable.has(2));
         System.out.println("Has 4 ?  " + hashTable.has(4));
 
+
+        List<Integer> keys = hashTable.keys();
+
+        System.out.println("keys: " + keys);
     }
 }
