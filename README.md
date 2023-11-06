@@ -19,6 +19,8 @@
 - [Merge Sort](/Sorting/merge/README.md)
 - [Sorting : Comparison](/Sorting/comparison/README.md)
 - [Hash Table Implementation](/Hashtable/README_HASHTABLE.md)
+- [Hashmap Repeated Word](/Hashtable/README_FIRSTREPEATED.md)
+- 
 
   
 
