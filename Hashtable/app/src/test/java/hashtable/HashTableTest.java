@@ -48,8 +48,6 @@ public class HashTableTest {
     @Test
     public void testKeysInHashTable(){
 
-
-
         hashTable.set(1, "One");
         hashTable.set(2, "Two");
         hashTable.set(3, "Three");
@@ -76,6 +74,18 @@ public class HashTableTest {
         assertEquals(true,hashTable.has(6));
         assertEquals(false,hashTable.has(9));
 
+
+    }
+
+    @Test
+    public void testFirstRepeatedWords(){
+        String str1="hi there";
+        String str2="hi there, there hi";
+        String str3=" hi there hi there";
+
+        assertEquals("No Repeated Words!",hashTable.repeatedWord(str1));
+        assertEquals("there",hashTable.repeatedWord(str2));
+        assertEquals("hi",hashTable.repeatedWord(str3));
 
     }
 

@@ -28,9 +28,23 @@ public class App {
         System.out.println("Has 2 ? " + hashTable.has(2));
         System.out.println("Has 4 ?  " + hashTable.has(4));
 
-
         List<Integer> keys = hashTable.keys();
 
         System.out.println("keys: " + keys);
+
+        System.out.println();
+        System.out.println("---- Code Challenge 31 ----");
+
+        String test = "Once upon a time, there was a brave princess who...";
+        String test2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...";
+        String test3 = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
+
+
+        HashTable<String> stringHashTable = new HashTable<>(test.length());
+        System.out.println(stringHashTable.repeatedWord(test));
+        System.out.println(stringHashTable.repeatedWord(test2));
+        System.out.println(stringHashTable.repeatedWord(test3));
+
+
     }
 }

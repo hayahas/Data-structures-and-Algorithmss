@@ -1,8 +1,8 @@
 package hashtable;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import org.checkerframework.checker.units.qual.K;
+
+import java.util.*;
 
 public class HashTable<T> {
 
@@ -73,6 +73,22 @@ public class HashTable<T> {
         return false;
     }
 
+
+    public String repeatedWord(String str) {
+        if(str.isEmpty() || str == null) throw new NullPointerException("your String is Empty") ;
+
+        List<String> words = List.of(str.split("[,\\s]+"));
+
+        HashMap<String,Integer> wordsTable =new HashMap<>();
+        for(int i=0;i<words.size();i++){
+            if(wordsTable.containsKey(words.get(i))){
+                return words.get(i);
+            }
+            wordsTable.put(words.get(i),i);
+        }
+
+        return "No Repeated Words!";
+    }
 
 
 }
