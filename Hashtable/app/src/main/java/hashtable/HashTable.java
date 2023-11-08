@@ -6,7 +6,7 @@ import java.util.*;
 
 public class HashTable<T> {
 
-    int size;
+    public int size;
     Node<T> hashArray[];
 
 
