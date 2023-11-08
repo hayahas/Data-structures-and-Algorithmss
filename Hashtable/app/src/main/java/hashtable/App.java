@@ -74,7 +74,7 @@ public class App {
 
         TreeIntersection treeIntersection =new TreeIntersection();
 
-       HashTable<Integer> intersectionResult = treeIntersection.tree_Intersection(bst1,bst2);
+        HashTable<Integer> intersectionResult = treeIntersection.tree_Intersection(bst1,bst2);
 
         for(int i=0;i<intersectionResult.size;i++){
             if(intersectionResult.get(i) != null)
