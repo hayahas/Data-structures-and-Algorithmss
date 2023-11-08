@@ -3,6 +3,10 @@
  */
 package hashtable;
 
+import treeIntersection.BinarySearchTree;
+import treeIntersection.BinaryTree;
+import treeIntersection.TreeIntersection;
+
 import java.util.List;
 
 public class App {
@@ -44,6 +48,40 @@ public class App {
         System.out.println(stringHashTable.repeatedWord(test));
         System.out.println(stringHashTable.repeatedWord(test2));
         System.out.println(stringHashTable.repeatedWord(test3));
+
+
+        System.out.println();
+        System.out.println("---- Code Challenge 32 ----");
+
+
+
+        BinarySearchTree<Integer> bst1 = new BinarySearchTree<Integer>();
+        bst1.insert(10);
+        bst1.insert(5);
+        bst1.insert(15);
+        bst1.insert(3);
+        bst1.insert(7);
+        bst1.insert(18);
+
+        BinarySearchTree<Integer> bst2 = new BinarySearchTree<Integer>();
+
+        bst2.insert(11);
+        bst2.insert(5);
+        bst2.insert(20);
+        bst2.insert(3);
+        bst2.insert(7);
+        bst2.insert(16);
+
+        TreeIntersection treeIntersection =new TreeIntersection();
+
+       HashTable<Integer> intersectionResult = treeIntersection.tree_Intersection(bst1,bst2);
+
+        for(int i=0;i<intersectionResult.size;i++){
+            if(intersectionResult.get(i) != null)
+            System.out.print(intersectionResult.get(i) + " ");
+        }
+
+
 
 
     }
