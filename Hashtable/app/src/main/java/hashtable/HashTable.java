@@ -9,6 +9,7 @@ public class HashTable<T> {
     int size;
     Node<T> hashArray[];
 
+
     public HashTable(int size){
         this.size=size;
         hashArray=new Node[size];
