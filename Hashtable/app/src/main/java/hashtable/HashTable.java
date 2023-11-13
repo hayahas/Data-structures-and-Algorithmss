@@ -91,6 +91,33 @@ public class HashTable<T> {
         return "No Repeated Words!";
     }
 
+    public ArrayList<String> leftJoin(HashMap<String,String> left,HashMap<String,String> right){
+        ArrayList<String> result = new ArrayList<>();
+
+        if(left.isEmpty()) throw new NullPointerException("Left Hashmap is Empty");
+        String str="";
+
+        if(right == null) {
+            for (String key : left.keySet()){
+                str += "[" + key + ", " + left.get(key) + ", " + null + "]";
+                result.add(str);
+            }
+            return result;
+        }
+
+        for (String key : left.keySet()){
+            str="";
+            if(right.containsKey(key)){
+                str += "[" + key + ", " + left.get(key) + ", " + right.get(key) + "]";
+            }else{
+                str += "[" + key + ", " + left.get(key) + ", " + null + "]";
+            }
+            result.add(str);
+        }
+
+        return result;
+    }
+
 
 }
 

@@ -3,6 +3,7 @@ package hashtable;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,8 +58,6 @@ public class HashTableTest {
         keys.add(1);keys.add(2);keys.add(3);keys.add(6);
         assertEquals(keys,hashTable.keys());
 
-
-
     }
 
 
@@ -86,6 +85,36 @@ public class HashTableTest {
         assertEquals("No Repeated Words!",hashTable.repeatedWord(str1));
         assertEquals("there",hashTable.repeatedWord(str2));
         assertEquals("hi",hashTable.repeatedWord(str3));
+
+    }
+
+    @Test
+    public void testLeftJoin(){
+
+        HashMap<String,String> left=new HashMap<>();
+        HashMap<String,String> right=new HashMap<>();
+
+        left.put("one","oneLeft");
+        left.put("two","twoLeft");
+        left.put("three","threeLeft");
+        left.put("four","fourLeft");
+        left.put("five","fiveLeft");
+
+        right.put("one","oneRight");
+        right.put("two","twoRight");
+        right.put("four","fourRight");
+        right.put("five","fiveRight");
+        right.put("six","sixRight");
+
+        ArrayList<String> result= hashTable.leftJoin(left,right);
+
+        assertEquals("[four, fourLeft, fourRight]", result.get(0));
+        assertEquals("[one, oneLeft, oneRight]", result.get(1));
+        assertEquals("[two, twoLeft, twoRight]", result.get(2));
+        assertEquals("[three, threeLeft, null]", result.get(3));
+        assertEquals("[five, fiveLeft, fiveRight]", result.get(4));
+
+
 
     }
 
