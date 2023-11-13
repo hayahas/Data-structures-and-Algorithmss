@@ -7,6 +7,8 @@ import treeIntersection.BinarySearchTree;
 import treeIntersection.BinaryTree;
 import treeIntersection.TreeIntersection;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class App {
@@ -82,6 +84,29 @@ public class App {
         }
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---- Code Challenge 33 ----");
+
+
+        HashMap<String,String> left = new HashMap<>();
+        HashMap<String,String> right = new HashMap<>();
+
+        left.put("diligent","employed");
+        left.put("fond","enamored");
+        left.put("guide","usher");
+        left.put("outfit","grab");
+        left.put("wrath","anger");
+
+        right.put("diligent","idle");
+        right.put("fond","averse");
+        right.put("guide","follow");
+        right.put("flow","jam");
+        right.put("wrath","delight");
+
+        ArrayList<String> result = hashTable.leftJoin(left,right);
+
+        System.out.println(result);
 
 
     }
