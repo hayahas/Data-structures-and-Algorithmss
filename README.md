@@ -22,4 +22,5 @@
 - [Hashmap Repeated Word](/Hashtable/README_FIRSTREPEATED.md)
 - [Tree Intersection](/Hashtable/README_TREEINTERSECTION.md)
 - [Hashmap Left Join](/Hashtable/README_LEFTJOIN.md)
+- [String Unique Characters](/Hashtable/README_STRINGUNIQUE.md)
  
