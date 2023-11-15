@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class HashTableTest {
     HashTable hashTable = new HashTable<>(10);
@@ -114,6 +114,21 @@ public class HashTableTest {
         assertEquals("[three, threeLeft, null]", result.get(3));
         assertEquals("[five, fiveLeft, fiveRight]", result.get(4));
 
+    }
+
+
+    @Test
+    public void test_hasUniqueChars(){
+
+        String str1 = "abcdefg";
+        String str2 = "abcddcba";
+        String str3 = "abc defg";
+        String str4 = "abcd dcba";
+
+        assertTrue(hashTable.hasUniqueChars(str1));
+        assertFalse(hashTable.hasUniqueChars(str2));
+        assertTrue(hashTable.hasUniqueChars(str3));
+        assertFalse(hashTable.hasUniqueChars(str4));
 
 
     }
