@@ -108,6 +108,24 @@ public class App {
 
         System.out.println(result);
 
+        System.out.println();
+        System.out.println("---- Code Challenge 34 ----");
+
+        String str1="The quick brown fox jumps over the lazy dog"; //FALSE
+        String str2="I love cats"; //TRUE
+        String str3="Donald the duck"; //FALSE
+
+        System.out.println(hashTable.hasUniqueChars(str1));
+        System.out.println(hashTable.hasUniqueChars(str2));
+        System.out.println(hashTable.hasUniqueChars(str3));
+
+
+
+
+
+
+
+
 
     }
 }

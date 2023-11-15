@@ -119,5 +119,23 @@ public class HashTable<T> {
     }
 
 
+    public boolean hasUniqueChars (String str) {
+
+        Set<Character> set = new HashSet<>();
+
+        for (char c : str.toCharArray()) {
+            if (set.contains(c)) {
+                return false;
+            } else {
+                if(c!= ' ' )
+                {
+                    set.add(c);
+                }
+
+            }
+        }
+        return true;
+    }
+
 }
 
