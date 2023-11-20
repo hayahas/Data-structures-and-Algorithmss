@@ -28,7 +28,7 @@ Efficiency :
 
 ### Solution
 
-- [Link to code ](/Hashtable/app/src/main/java/graphs/App.java)
+- [Link to code ](/Graphs/app/src/main/java/graphs/App.java)
 ```javapackage graphs;
 import java.util.HashMap;
 import java.util.LinkedList;
