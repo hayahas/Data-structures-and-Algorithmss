@@ -4,6 +4,7 @@
 package graphs;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class App {
 
@@ -35,6 +36,12 @@ public class App {
         System.out.println("Neighbors of D: " +  graph.getNeighbors(d));
 
 
+        System.out.println("");
+        System.out.println("-----Code Challenge 36-----");
+        List<Vertex<String>> result = graph.breadthFirstTraversal(a);
+        for (Vertex<String> vertex : result) {
+            System.out.print(vertex.getValue() + " ");
+        }
 
 
 

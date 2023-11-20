@@ -7,8 +7,18 @@ import java.util.Objects;
 public class Vertex<T extends Comparable<? super T>> implements Comparable<Vertex<T>> {
     private T value;
 
+    private boolean visited;
+
     public Vertex(T value) {
         this.value = value;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
     public T getValue() {

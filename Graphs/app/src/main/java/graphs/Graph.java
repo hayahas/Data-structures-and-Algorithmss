@@ -1,6 +1,5 @@
 package graphs;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<T>> {
 
@@ -45,6 +44,30 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
 
     public int size() {
         return numberOfVertices;
+    }
+    public List<Vertex<T>> breadthFirstTraversal(Vertex<T> root) {
+        List<Vertex<T>> visitedVertices = new ArrayList<>();
+        Set<Vertex<T>> visited = new HashSet<>();
+
+        Queue<Vertex<T>> queue = new LinkedList<>();
+        visited.add(root);
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Vertex<T> currentVertex = queue.poll();
+            visitedVertices.add(currentVertex);
+
+            for (Edge<T> edge : adjacencyLists.get(currentVertex)) {
+                Vertex<T> neighbor = edge.getDestination();
+                if (!visited.contains(neighbor)) {
+                    visited.add(neighbor);
+                    queue.add(neighbor);
+                }
+            }
+
+        }
+
+        return visitedVertices;
     }
 
     @Override
