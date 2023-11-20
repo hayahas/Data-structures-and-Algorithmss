@@ -21,7 +21,7 @@ Efficiency :
 
 ### Solution
 
-- [Link to code ](/Hashtable/app/src/main/java/graphs/App.java)
+- [Link to code ](/Graphs/app/src/main/java/graphs/App.java)
 ```javapackage graphs;
   public List<Vertex<T>> breadthFirstTraversal(Vertex<T> root) {
         List<Vertex<T>> visitedVertices = new ArrayList<>();
