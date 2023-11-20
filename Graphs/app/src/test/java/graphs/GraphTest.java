@@ -3,6 +3,7 @@ package graphs;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -93,6 +94,31 @@ public class GraphTest {
 
         graph.addVertex("D");
         assertEquals(4, graph.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraversal() {
+
+        Graph<String> graph = new Graph<>(10);
+
+        Vertex<String> a = graph.addVertex("A");
+        Vertex<String> b = graph.addVertex("B");
+        Vertex<String> c = graph.addVertex("C");
+        Vertex<String> d = graph.addVertex("D");
+
+        graph.addEdge(a, b);
+        graph.addEdge(a, c);
+        graph.addEdge(b, d);
+        graph.addEdge(c, d);
+
+
+        List<Vertex<String>> result = graph.breadthFirstTraversal(a);
+
+
+        assertEquals(a, result.get(0));
+        assertEquals(b, result.get(1));
+        assertEquals(c, result.get(2));
+        assertEquals(d, result.get(3));
     }
 
 }
