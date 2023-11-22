@@ -30,6 +30,7 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
         edges.add(new Edge<>(start, destination, weight));
     }
 
+
     public LinkedList<Vertex<T>> getVertices() {
         return new LinkedList<>(adjacencyLists.keySet());
     }
@@ -70,6 +71,25 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
         return visitedVertices;
     }
 
+    public Integer businessTrip(HashMap<String, HashMap<String, Integer>> graph, String[] trip) {
+        if (trip.length <= 1) {
+            return 0;
+        }
+
+        int totalCost = 0;
+
+        for (int i = 0; i < trip.length - 1; i++) {
+            String currentCity = trip[i];
+            String nextCity = trip[i + 1];
+
+            if (graph.containsKey(currentCity) && graph.get(currentCity).containsKey(nextCity)) {
+                totalCost += graph.get(currentCity).get(nextCity);
+            } else {
+                return null;
+            }
+        }
+        return totalCost;
+    }
     @Override
     public int compareTo(Graph<T> o) {
         throw new UnsupportedOperationException("Graph does not implement compareTo()");
