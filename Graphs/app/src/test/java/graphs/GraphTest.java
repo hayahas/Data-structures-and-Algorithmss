@@ -2,11 +2,11 @@ package graphs;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GraphTest {
 
@@ -119,6 +119,21 @@ public class GraphTest {
         assertEquals(b, result.get(1));
         assertEquals(c, result.get(2));
         assertEquals(d, result.get(3));
+    }
+
+    @Test
+    public void testBusinessTrip() {
+        Graph<String> graph = new Graph<>(10);
+        HashMap<String, HashMap<String, Integer>> flights = new HashMap<>();
+        flights.put("CityA", new HashMap<String, Integer>(){{put("CityB", 50);}});
+        flights.put("CityB", new HashMap<String, Integer>(){{put("CityC", 30);}});
+        flights.put("CityC", new HashMap<String, Integer>(){{put("CityD", 20);}});
+
+        String[] validTrip = {"CityA", "CityB", "CityC", "CityD"};
+        Integer result = graph.businessTrip(flights, validTrip);
+
+        assertNotNull(result);
+        assertEquals(Integer.valueOf(100), result);
     }
 
 }

@@ -3,6 +3,7 @@
  */
 package graphs;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,8 +24,6 @@ public class App {
         graph.addEdge(c, a, 3);
         graph.addEdge(d, a, 4);
 
-
-
         System.out.println("Graph:\n" + graph);
 
         System.out.println("Vertices: " + graph.getVertices());
@@ -43,6 +42,23 @@ public class App {
             System.out.print(vertex.getValue() + " ");
         }
 
+        System.out.println("");
+        System.out.println("-----Code Challenge 37-----");
+
+        HashMap<String, HashMap<String, Integer>> flights = new HashMap<>();
+        flights.put("Metroville", new HashMap<String, Integer>(){{put("Pandora", 82);}});
+        flights.put("Arendelle", new HashMap<String, Integer>(){{put("New Monstropolis", 45);}});
+        flights.put("New Monstropolis", new HashMap<String, Integer>(){{put("Naboo", 70);}});
+        flights.put("Naboo", new HashMap<String, Integer>(){{put("Pandora", 90);}});
+
+        String[] trip1 = {"Metroville", "Pandora"};
+        String[] trip2 = {"Arendelle", "New Monstropolis", "Naboo"};
+        String[] trip3 = {"Narnia", "Arendelle", "Naboo"};
+
+
+        System.out.println(graph.businessTrip(flights, trip1));
+        System.out.println(graph.businessTrip(flights, trip2));
+        System.out.println(graph.businessTrip(flights, trip3));
 
 
     }
