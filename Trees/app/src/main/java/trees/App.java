@@ -15,9 +15,11 @@ public class App {
         bst.insert(3);
         bst.insert(7);
         bst.insert(2);
+        bst.insert(1);
         bst.insert(4);
         bst.insert(6);
         bst.insert(8);
+        bst.insert(10);
 
         System.out.println(bst.contains(8)); // true
         System.out.println(bst.contains(10)); // false
@@ -26,7 +28,34 @@ public class App {
         System.out.println("Min value : " + bst.getMin()); // 2
 
         System.out.println(bst.breadthFirst());
+        System.out.println("Bottom Left: " + bst.bottomLeft(bst.root)); //1
+        System.out.println("Bottom right: " + bst.bottomright(bst.root)); //10
+        System.out.println("Deepest Level sum : " + bst.deepestLevelSum(bst.root)); //11
 
+        BinarySearchTree<Integer> bst1 = new BinarySearchTree<>();
+        bst1.insert(5);
+        bst1.insert(3);
+        bst1.insert(7);
+        bst1.insert(2);
+        bst1.insert(1);
+        bst1.insert(4);
+        bst1.insert(6);
+        bst1.insert(8);
+        bst1.insert(10);
+
+        System.out.println("Summation of bst1 : " + bst1.allNodesSummation(bst1.root)); //46
+
+
+        System.out.println("Is identical ?  " + bst.isIdentical(bst.root,bst1.root)); //true
+
+        BinarySearchTree<Integer> bst2 = new BinarySearchTree<>();
+        bst2.insert(5);  bst2.insert(50);  bst2.insert(5);  bst2.insert(5);  bst2.insert(5);
+
+        System.out.println("Is univalued ?  " + bst2.isUnivalued(bst2.root)); //false
+        System.out.println("Is balanced ?  " + bst2.isBalanced(bst2.root)); //false
+         System.out.println("Is balanced ?  " + bst.isBalanced(bst.root)); //true
+        System.out.println("Is Binary Search tree ? " + bst.isBinarysearchTree(bst1.root)); //true
+         System.out.println("Max Depth " + bst.maxDepth(bst2.root)); //
 
 
     }
