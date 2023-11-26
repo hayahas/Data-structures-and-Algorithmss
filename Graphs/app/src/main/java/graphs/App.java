@@ -60,6 +60,12 @@ public class App {
         System.out.println(graph.businessTrip(flights, trip2));
         System.out.println(graph.businessTrip(flights, trip3));
 
+        System.out.println("");
+        System.out.println("-----Code Challenge 38-----");
+        List<Vertex<String>> result2 = graph.depthFirstPreOrderTraversal();
+        for (Vertex<String> vertex : result) {
+            System.out.print(vertex.getValue() + " ");}
+
 
     }
 }
