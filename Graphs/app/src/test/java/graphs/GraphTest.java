@@ -2,6 +2,7 @@ package graphs;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -135,5 +136,27 @@ public class GraphTest {
         assertNotNull(result);
         assertEquals(Integer.valueOf(100), result);
     }
+    @Test
+    public void testDepthFirstPreOrderTraversal() {
 
+        Graph<String> graph = new Graph<>(10);
+
+        Vertex<String> a = graph.addVertex("A");
+        Vertex<String> b = graph.addVertex("B");
+        Vertex<String> c = graph.addVertex("C");
+        Vertex<String> d = graph.addVertex("D");
+
+        graph.addEdge(a, b);
+        graph.addEdge(a, c);
+        graph.addEdge(b, d);
+        graph.addEdge(c, d);
+
+
+        List<Vertex<String>> result = graph.depthFirstPreOrderTraversal();
+
+        assertEquals(b, result.get(0));
+        assertEquals(d, result.get(1));
+        assertEquals(c, result.get(2));
+        assertEquals(a, result.get(3));
+    }
 }
